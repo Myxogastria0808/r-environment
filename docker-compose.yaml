@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  r-env:
+    container_name: r-env
+    tty: true
+    build:
+      context: .
+      dockerfile: ./src/Dockerfile
+    volumes:
+      - type: bind
+        source: ./src
+        target: /home/src
